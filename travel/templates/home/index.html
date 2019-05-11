@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block meta_links %}
+{% endblock %}
+{% block style_links %}
+{% endblock %}
+
+{% block title %}
+{% endblock %}
+
+
+{% block content %}
+<div>
+    <p>This is from index</p>
+    <img src="{% static 'img/travel.jpg' %}" alt="my image">
+</div>
+
+<div>
+    <p>List of my articles</p>
+    
+        {% for article in articles %}
+        <div class="my-3" >
+        <h3>{{article.title}}</h3>
+        <p class="text-muted">{{article.date}}</p>
+        <p>{{article.content}}</p>
+        </div>
+        {% endfor %}
+    
+    
+</div>
+
+<div class="container">
+    {% for hero in hero_list %}
+    <img src="{{hero.image.url}}" alt="{{hero.caption}}" class="img-fill">
+    <span class="text-muted">{{hero.caption}} | {{hero.date}}</span>
+    <p class="text-muted">{{hero.sub_herading}}</p>
+    {% endfor %}
+
+  
+    
+
+</div>
+
+{% endblock %}
+{% block script_links %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}
+
+
+
+
+
+
