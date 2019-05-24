@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block meta_links %}
+{% endblock %}
+{% block style_links%}
+
+{% endblock %}
+
+{% block title %}
+create here
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <form method="POST" action="" accept-charset="utf-8" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Image</label>
+            <input type="file" value="{%if form.image.value %}{{form.image.value}}{% endif %}" class="form-control-file"
+                id="exampleFormControlFile1" name="image" id="id_image">
+        </div>
+        <div class="my-2 image-holder">
+            <img id="image_holder" src="{% if instance %}{{instance.image.url}} {%  endif %}" style="height: 80px;"
+                alt="{{instance.caption}}">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Caption</label>
+            <input type="text" value="{%if form.caption.value %}{{form.caption.value}}{% endif %}" class="form-control"
+                id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter fullname" name="caption">
+            <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Sub Headings</label>
+            <input type="text" value="{%if form.sub_headings.value %}{{form.sub_headings.value}}{% endif %}"
+                class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter sub-headings" name="sub_headings">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert_alert-primary" role="alert"></div>
+    {{message}}
+    {% endfor %}
+    {% endif %}
+</div>
+{% endblock content %}
+
+{% block script_links%}
+{% endblock %}
+{% block scripts %}
+<script>
+    $(document).ready(function () {
+        $('#id_image').on('change', function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#image_holder').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        })
+    });
+</script>
+{% endblock %}

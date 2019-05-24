@@ -1,0 +1,178 @@
+body{
+    margin: 0;
+}
+
+
+.logo{
+    height: 50px;
+    border-radius: 40px;
+    margin-right: 150px;
+}
+a:hover{
+    background-color: white !important;
+}
+
+.navbar{
+    position: absolute !important;
+    top: 30px;
+    left: 250px;
+    z-index: 9999;
+    /* width: 100%; */
+    border-radius: 40px;
+    width: 60%;
+    /* margin-top: 25px; */
+    /* margin-left: 250px; */
+
+}
+
+.nav-link{
+    margin-right: 100px;
+}
+
+/* .nav-link:last-child{
+    margin-right: 0;
+} */
+
+.card{
+    height: 410px;
+}
+
+.cardimage{	
+
+	width: 100%;
+	height: 250px;
+    
+	object-fit: cover;
+	object-position: right;
+}
+
+/* .cardimg{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: right;
+    margin-top: 10px;
+
+} */
+.card-title {
+	margin-top: 1px;
+	font-size: 10px;
+	font-weight: 14px;
+	letter-spacing:0.1em;
+}
+
+.recent {
+	height:50px;
+	margin-top: 10px;
+	width: 75px;
+}
+
+.container{
+    margin-left: 0 !important;
+}
+
+
+.natureimage{
+    width: 50px;
+	height: 50px;
+    
+	object-fit: cover;
+	object-position: right;
+}
+.nitesh{
+    text-decoration: underline;
+}
+/* .mahesh{
+    display: inline;
+}
+.naresh{
+    display: inline;
+} */
+.amit{
+    display: inline-block;
+    
+}
+.paragraph{
+    padding: 0;
+}
+
+#name{
+    border-radius: 30px;
+    font-size: .6rem;
+    border: 2px solid grey;
+}
+.red{
+    text-decoration: underline;
+}
+
+.suzzan{
+    display: inline-block;
+}
+#roshan{
+    width: 75%;
+}
+
+.btn{
+    height: 50px;
+}
+.sanam{
+    margin-right: 100px;
+    color: black;
+}
+/* i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  } */
+  .fa{
+      font-size: 15px;
+      color: black;
+      margin-right: 50px;
+  }
+  .footer-navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-navbar a::after {
+	content: "|";
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.footer-navbar a:last-child::after {
+	content: "";
+}
+
+
+.tag-name{
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+
+}
+  
+.tag-name::before {
+    content: ">>";
+    margin-right: 5px;
+}
+
+.tag-name:hover {
+    transform:translateX(5px);
+}
+
+.story-card {
+
+
+}
+
+.story-card:hover {
+    transform: scale(2.01):
+}
+
+
